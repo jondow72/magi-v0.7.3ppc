@@ -3,7 +3,7 @@ AM_CPPFLAGS =  $(INCLUDES) \
   $(BDB_CPPFLAGS) \
   $(BOOST_CPPFLAGS) $(BOOST_INCLUDES)
 AM_CPPFLAGS += $(LEVELDB_CPPFLAGS)
-AM_LDFLAGS = $(PTHREAD_CFLAGS)
+AM_LDFLAGS = $(PTHREAD_CFLAGS) -lgmp -lgmpxx -lcrypto
 
 AM_CPPFLAGS += -I$(top_srcdir)/src/leveldb/helpers/memenv \
   -I$(builddir)
@@ -85,7 +85,16 @@ BITCOIN_CORE_H = \
   util.h \
   version.h \
   walletdb.h \
-  wallet.h
+  wallet.h \
+  hash_magi.h \
+  hash/sph_types.h \
+  hash/sph_keccak.h \
+  hash/sph_haval.h \
+  hash/sph_ripemd.h \
+  hash/sph_sha2.h \
+  hash/sph_tiger.h \
+  hash/sph_whirlpool.h \
+  magimath.h
 
 JSON_H = \
   json/json_spirit.h \
@@ -124,6 +133,14 @@ libpeercoin_server_a_SOURCES = \
   rpcrawtransaction.cpp \
   rpcserver.cpp \
   txdb.cpp \
+  hash/keccak.cpp \
+  hash/haval.cpp \
+  hash/ripemd.cpp \
+  hash/sha2.cpp \
+  hash/sha2big.cpp \
+  hash/tiger.cpp \
+  hash/whirlpool.cpp \
+  magimath.cpp \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
