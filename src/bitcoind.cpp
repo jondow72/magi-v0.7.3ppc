@@ -7,6 +7,10 @@
 #include "rpcclient.h"
 #include "init.h"
 #include <boost/algorithm/string/predicate.hpp>
+#include <boost/bind/bind.hpp>
+#include <boost/bind/placeholders.hpp>
+
+using namespace boost::placeholders;
 
 void DetectShutdownThread(boost::thread_group* threadGroup)
 {
