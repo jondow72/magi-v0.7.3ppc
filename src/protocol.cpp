@@ -28,7 +28,7 @@ static unsigned char pchMessageStartBitcoin[4] = { 0xf9, 0xbe, 0xb4, 0xd9 };
 static unsigned char pchMessageStartPeercoin[4] = { 0xe6, 0xe8, 0xe9, 0xe5 };
 static unsigned int nMessageStartSwitchTime = 1347300000;
 
-unsigned char pchMessageStart[4] = { 0xe6, 0xe8, 0xe9, 0xe5 };
+unsigned char pchMessageStart[4] = { 0xf0, 0xb9, 0xb3, 0xd6 };
 
 void GetMessageStart(unsigned char pchMessageStart[], bool fPersistent)
 {
