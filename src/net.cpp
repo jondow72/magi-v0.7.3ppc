@@ -15,6 +15,9 @@
 #include "ui_interface.h"
 #include "script.h"
 
+#include <boost/bind/bind.hpp>
+#include <boost/bind/placeholders.hpp>
+
 #ifdef WIN32
 #include <string.h>
 #endif
@@ -34,6 +37,7 @@
 
 using namespace std;
 using namespace boost;
+using namespace boost::placeholders;
 
 static const int MAX_OUTBOUND_CONNECTIONS = 8;
 
