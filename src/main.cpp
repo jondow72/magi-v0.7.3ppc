@@ -3273,7 +3273,7 @@ bool InitBlockIndex() {
         // Genesis block
         const char* pszTimestamp = "Super fracking, Physics Today 67(8), 34 (2014); doi: 10.1063/PT.3.2480";
         CTransaction txNew;
-        txNew.nTime = nChainStartTime;
+        txNew.nTime = 1407209706;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(9999) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
